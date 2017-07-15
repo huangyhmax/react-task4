@@ -31,11 +31,33 @@ export default class UserDialog extends Component{
             console.log(user)  //user>>>leanCloud.js>>>var user
             console.log(1)
         }
+        // let error = (error)=>{
+        //     // alert(error)
+        //     switch(error.code){
+        //         case 202:
+        //             alert('用户名已被占用')
+        //         break
+        //         default:
+        //             alert(error)
+        //         break
+        //     }
+        // }
         let error = (error)=>{
-            // alert(error)
             switch(error.code){
                 case 202:
-                    alert('用户名已被占用')
+                    alert('用户名已被占用，请重新起名')
+                break
+                case 203:
+                    alert('电子邮箱地址已经被占用')
+                break
+                case 200:
+                    alert('用户名为空，请重新输入')
+                break
+                case 201:
+                    alert('密码为空，请重新输入')
+                break
+                case 125:
+                    alert('电子邮箱无效')
                 break
                 default:
                     alert(error)
@@ -52,11 +74,31 @@ export default class UserDialog extends Component{
         let success = (user)=>{
             this.props.onSignIn.call(null, user)
         }
+        // let error = (error)=>{
+        //     // alert(error)
+        //     switch(error.code){
+        //         case 210:
+        //             alert('用户名与密码不匹配')
+        //         break
+        //         default:
+        //             alert(error)
+        //         break
+        //     }
+        // }
         let error = (error)=>{
             // alert(error)
             switch(error.code){
                 case 210:
                     alert('用户名与密码不匹配')
+                break
+                case 217:
+                    alert('用户名无效，不允许空白用户名')
+                break
+                case 218:
+                    alert('密码无效，不允许空白密码')
+                break
+                case 211:
+                    alert('该用户名未注册，请先注册')
                 break
                 default:
                     alert(error)
