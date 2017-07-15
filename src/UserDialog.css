@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.UserDialog-Wrapper{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 10;
+    background-color:#323548;
+}
+.UserDialog{
+    width:400px;
+    height:280px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -140px;
+    margin-left: -200px;
+    background-color: #edeff1;
+    border-radius: 6px;
+}
+.UserDialog .signInOrSignUp{
+    font-size: 0;
+}
+.signup{
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+}
+.signin{
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+}
+.signin{
+    border-radius: 0px 6px 0px 0px;
+}
+.signup{
+    border-radius: 6px 0px 0px 0px;
+}
+.signin.active{
+    background-color: #e8573c;
+}
+.signup.active{
+    background-color: #e8573c;
+}
+.pics{
+    position: absolute;
+    left: -140px;
+    top: -8px;
+    width: 96px;
+}
+.pics>img{
+    margin-bottom: 20px;
+}
+.pics>h4{
+    color: #fff;
+    line-height: 25px;
+}
+form{
+    margin-top: 10px;
+}
+.row{
+    text-align: center;
+}
+.row>input{
+    margin: 8px 0px;
+    width: 250px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 15px;
+}
+.row>input:hover{
+    border: 2px solid #e8573c;
+}
+.row>button{
+    width: 250px;
+    height: 40px;
+    border: none;
+    background-color: #e8573c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 8px 0px;
+    cursor: pointer;
+    
+}
+.row label{
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #323548;
+}
+.row .user{
+    margin-left: -17px;
+}
+.logininagain,.forget{
+    font-size: 12px;
+    color: #a08e8e;
+
+}
+.logininagain:hover,.forget:hover{
+    color: #e8573c;
+}
+.resetpassword{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #e8573c;
+    border-radius: 6px 6px 0px 0px;
+}
+.UserDialog .forgotPassword > h3 { padding: 1em; }
+.UserDialog .forgotPassword > form { padding: 0 1em 1em; }
+
+

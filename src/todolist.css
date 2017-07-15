@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #323548;
+}
+.aa{
+    width: 1000px;
+    margin: 30px auto;
+    height: 90vh;
+    background-color: #e8573c;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    line-height:60px;
+}
+h1 .loginout{
+    vertical-align: middle;
+    width: 90px;
+    height: 35px;
+    border: 3px dotted #323548;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    /* padding: 8px 8px 8px 8px; */
+    line-height: 32px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    outline: none;
+    top: 15px;
+}
+.right{
+    background-color: #EE7665;
+    width: 700px;
+    position: absolute;
+    top: 40px;
+    right:45px;
+    display:none;
+    left: 150px;
+}
+.right.hover{
+    display: block;
+}
+.noteclass{
+    border: 2px solid #323548;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px 8px 8px 20px;
+    line-height: 30px;
+    /*position: relative;
+    top: 45px;*/
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 5px;
+    margin-left: 66px;
+    cursor: pointer;
+}
+.noteclass.active{
+    background-color: #323548;
+}
+nav{
+    width: 148px;
+    height:50px;
+    position: relative;
+    top:70px;
+}
+.listname{
+    font-size:20px;
+    width: 450px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    outline: none;
+    border:none;
+    padding-left:20px;
+    margin-bottom: 10px; 
+}
+.items>li{
+    border-bottom: 2px solid #e9583d;
+    height: 50px;
+    width: 650px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 20px;
+    margin: 0px 15px;
+}
+.delitems>li{
+    padding-left: 20px;
+}
+.items>li .chexb{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+.delicon{
+    width: 25px;
+    vertical-align: middle;
+    margin-left: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+.listcxt{
+    width: 560px;
+    height: 40px;
+    border: none;
+    background-color: #b94430;
+    color: #fff;
+    outline: none;
+    border-radius: 2px;
+}
+.listcxt.active{
+    background-color:#EE7665;
+}
+.delpanel{
+    padding-top: 10px;
+}
+.getback{
+    vertical-align: middle;
+    width: 50px;
+    height: 25px;
+    border: 3px dotted #323548;
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    line-height: 22px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 15px
+}
