@@ -8,6 +8,7 @@ import * as localStorage from './localStorage';
 import './todolist.css';
 import UserDialog from './UserDialog';
 import {getCurrentUser, signOut} from './leanCloud';
+import {deepcopy} from './deepcopy';
 // import {setData} from './Storage';
 
 // const TodoContainer=document.getElementById('container');
@@ -88,19 +89,22 @@ export default class Listtodo extends React.Component{
         localStorage.save('todoList',this.state.todoList)
     }
     onSignIn(user){
-        let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+        // let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+        let stateCopy=deepcopy(this.state)
         stateCopy.user = user
         this.setState(stateCopy)
     }
     onsignOut(){
         signOut()
-        let stateCopy = JSON.parse(JSON.stringify(this.state))
+        // let stateCopy = JSON.parse(JSON.stringify(this.state))
+        let stateCopy=deepcopy(this.state)
         stateCopy.user = {}
         this.setState(stateCopy)
         
     }
     onSignUp(user){
-        let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+        // let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+        let stateCopy=deepcopy(this.state)
         stateCopy.user = user
         this.setState(stateCopy)
     }

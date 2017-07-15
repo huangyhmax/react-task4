@@ -3,7 +3,8 @@ import './UserDialog.css';
 import ForgotPasswordForm from './ForgotPasswordForm';
 import SignInOrSignUp from './SignInOrSignUp'
 import {signUp, signIn, sendPasswordResetEmail} from './leanCloud';
-import logo from './img/clipboard.svg'
+import logo from './img/clipboard.svg';
+import {deepcopy} from './deepcopy';
 
 export default class UserDialog extends Component{
     constructor(props){
@@ -109,7 +110,8 @@ export default class UserDialog extends Component{
     }
 
     changeFormData(key, e){
-        let stateCopy = JSON.parse(JSON.stringify(this.state))  // 用 JSON 深拷贝
+        // let stateCopy = JSON.parse(JSON.stringify(this.state))  // 用 JSON 深拷贝
+        let stateCopy=deepcopy(this.state)
         stateCopy.formData[key] = e.target.value //!!!!![key]
         this.setState(stateCopy)
         console.log(this.state.formData.username)
@@ -117,13 +119,15 @@ export default class UserDialog extends Component{
     }
 
     showForgotPassword(){
-        let stateCopy = JSON.parse(JSON.stringify(this.state))
+        // let stateCopy = JSON.parse(JSON.stringify(this.state))
+        let stateCopy=deepcopy(this.state)
         stateCopy.selectedTab = 'forgotPassword'
         this.setState(stateCopy)
     }
     
     returnToSignIn(){
-        let stateCopy = JSON.parse(JSON.stringify(this.state))
+        // let stateCopy = JSON.parse(JSON.stringify(this.state))
+        let stateCopy=deepcopy(this.state)
         stateCopy.selectedTab = 'signInOrSignUp'
         this.setState(stateCopy)
     }
